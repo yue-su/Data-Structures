@@ -30,11 +30,6 @@ class ListNode:
             self.next.prev = self.prev
 
 
-"""
-Our doubly-linked list class. It holds references to 
-the list's head and tail nodes.
-"""
-
 
 class DoublyLinkedList:
     def __init__(self, node=None):
@@ -96,7 +91,9 @@ class DoublyLinkedList:
     """
 
     def remove_from_tail(self):
-        pass
+        value = self.tail.value
+        self.delete(self.tail)
+        return value
 
     """
     Removes the input node from its current spot in the 
