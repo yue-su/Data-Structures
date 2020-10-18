@@ -103,7 +103,11 @@ class DoublyLinkedList:
     """
 
     def move_to_front(self, node):
-        pass
+        if node is self.head:
+            return
+        value = node.value
+        self.delete(node)
+        self.add_to_head(value)
 
     """
     Removes the input node from its current spot in the 
