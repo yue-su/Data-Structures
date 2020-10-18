@@ -64,7 +64,9 @@ class DoublyLinkedList:
     """
 
     def remove_from_head(self):
-
+        value = self.head.value
+        self.delete(self.head)
+        return value
 
 
     """
