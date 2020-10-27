@@ -52,9 +52,12 @@ class BSTNode:
 
     # Call the function `fn` on the value of each node
     def for_each(self, fn):
+        # if left exist
         if self.left:
             self.left.for_each(fn)
+        # do the cb on the root
         fn(self.value)
+        # if right exist
         if self.right:
             self.right.for_each(fn)
 
